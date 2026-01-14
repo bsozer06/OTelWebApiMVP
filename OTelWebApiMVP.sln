@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTelWebApiMVP", "OTelWebApiMVP.csproj", "{87C83246-8CA3-8B55-32C3-977F4BC2CB7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87C83246-8CA3-8B55-32C3-977F4BC2CB7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87C83246-8CA3-8B55-32C3-977F4BC2CB7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87C83246-8CA3-8B55-32C3-977F4BC2CB7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87C83246-8CA3-8B55-32C3-977F4BC2CB7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6491AB39-59EB-49C5-9ADC-E6BC3CCC4224}
+	EndGlobalSection
+EndGlobal
