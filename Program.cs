@@ -12,9 +12,10 @@ builder.Services.AddOpenTelemetry()
         tracerBuilder
             .SetResourceBuilder(ResourceBuilder.CreateDefault().AddService("MyWebApiService"))
             .AddAspNetCoreInstrumentation() // Automatically captures incoming web requests
+            .AddHttpClientInstrumentation()
             .AddConsoleExporter();          // Prints the traces to the terminal
     });
-
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
 
@@ -31,8 +32,12 @@ var summaries = new[]
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
 
-app.MapGet("/weatherforecast", () =>
+app.MapGet("/weatherforecast", async (IHttpClientFactory httpClientFactory) =>
 {
+    // Create a client and call an external site
+    var client = httpClientFactory.CreateClient();
+    await client.GetAsync("https://www.google.com"); // Simulating an external dependency call
+    
     var forecast =  Enumerable.Range(1, 5).Select(index =>
         new WeatherForecast
         (
